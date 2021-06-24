@@ -1,29 +1,28 @@
-<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            path1tent="width=device-width, 
-                       initial-scale=1.0"/>
-        <title>D3.js image() Function</title>
-    </head>
-    <style></style>
-    <body>
-        <img src="https://github.com/ivan-abreu/web-testd3js/blob/e180470069c62eb2470f63763f201edb594a8a43/images/digital-graphics-light-box-01-ivan-abreu-artist.jpg" />
-        <script src="https://d3js.org/d3.v4.min.js">
-        </script>
-        <script src="https://d3js.org/d3-dsv.v1.min.js">
-        </script>
-        <script src="https://d3js.org/d3-fetch.v1.min.js">
-        </script>
-  
-        <script>
-            d3.image( `images/digital-graphics-light-box-02-ivan-abreu-artist.jpg`, 
-              { crossOrigin: "anonymous" }).then((img) => {
-                document.body.append("Image using d3.image()");
-                document.body.append(img);
-            });
-        </script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      path1tent="width=device-width, 
+                       initial-scale=1.0"
+    />
+    <title>D3.js image() Function</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <img
+      src="https://raw.githubusercontent.com/ivan-abreu/web-testd3js/e180470069c62eb2470f63763f201edb594a8a43/images/digital-graphics-light-box-01-ivan-abreu-artist.jpg"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js" integrity="sha512-cd6CHE+XWDQ33ElJqsi0MdNte3S+bQY819f7p3NUHgwQQLXSKjE4cPZTeGNI+vaxZynk1wVU3hoHmow3m089wA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      d3.image(
+        `https://raw.githubusercontent.com/ivan-abreu/web-testd3js/e180470069c62eb2470f63763f201edb594a8a43/images/digital-graphics-light-box-02-ivan-abreu-artist.jpg`,
+        { crossOrigin: 'anonymous' }
+      ).then(img => {
+        document.body.append('Image using d3.image()');
+        document.body.append(img);
+      });
+    </script>
+  </body>
 </html>
