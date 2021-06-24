@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            path1tent="width=device-width, 
+                       initial-scale=1.0"/>
+        <title>D3.js image() Function</title>
+    </head>
+    <style></style>
+    <body>
+        <script src="https://d3js.org/d3.v4.min.js">
+        </script>
+        <script src="https://d3js.org/d3-dsv.v1.min.js">
+        </script>
+        <script src="https://d3js.org/d3-fetch.v1.min.js">
+        </script>
+  
+        <script>
+            d3.image( `https://ivanabreu.net/images/device-art-typography-ice-extrabold-06-ivan-abreu-artist.jpg`, 
+              { crossOrigin: "anonymous" }).then((img) => {
+                document.body.append("Image using d3.image()");
+                document.body.append(img);
+            });
+        </script>
+    </body>
+</html>
